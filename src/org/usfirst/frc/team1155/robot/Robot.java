@@ -1,6 +1,8 @@
 
 package org.usfirst.frc.team1155.robot;
 
+import org.usfirst.frc.team1155.robot.subsystems.MecanumDrive;
+
 import com.ni.vision.NIVision;
 import com.ni.vision.NIVision.DrawMode;
 import com.ni.vision.NIVision.Image;
@@ -29,11 +31,13 @@ import edu.wpi.first.wpilibj.vision.AxisCamera;
 
 public class Robot extends IterativeRobot {
     public static Command oi;
-    public static SmartDashboard dash;
+    public static MecanumDrive mecanumDrive;
     
     public void robotInit() {
     	
 		oi = new OI();
+		mecanumDrive = new MecanumDrive();
+		
 	}
 	
 	public void teleopPeriodic() {
