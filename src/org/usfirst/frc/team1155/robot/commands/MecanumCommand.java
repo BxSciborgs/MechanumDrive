@@ -47,7 +47,7 @@ public class MecanumCommand extends Command{
 	@Override
 	protected void interrupted() {
 		// TODO Auto-generated method stub
-		
+		Robot.mecanumDrive.rotateRobot(0);
 	}
   
 }
